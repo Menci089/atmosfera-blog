@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmosfera Coffee & Eatery Jepara | Jurnal Kopi & Ruang Cerita</title>
+  <!-- Tambahan Favicon agar logo muncul di tab browser -->
+  <link rel="icon" type="image/png" href="images/logo-atmosfera.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigasi -->
+ <!-- Navigasi -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#beranda" class="logo-link">
+        <img src="images/logo-atmosfera.png" alt="Logo Atmosfera Coffee and Eatery Jepara" class="nav-logo">
+      </a>
+      <nav class="nav-links">
+        <a href="#beranda">Beranda</a>
+        <a href="#jurnal">Jurnal Kopi</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#lokasi" class="btn-outline">Kunjungi Kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="hero">
+    <div class="container hero-content">
+      <span class="badge">Coffee & Eatery • Jepara</span>
+      <h1>Ruang Cerita, Aroma Kopi, dan Rasa di Jantung Jepara</h1>
+      <p>Catatan seputar seduhan lokal, cerita di balik dapur, dan kehangatan komunitas di Atmosfera.</p>
+      <a href="#jurnal" class="btn-primary">Baca Jurnal Terbaru</a>
+    </div>
+  </section>
+
+  <!-- Bagian Blog / Jurnal -->
+  <section id="jurnal" class="blog-section container">
+    <div class="section-header">
+      <div>
+        <h2>Jurnal Atmosfera</h2>
+        <p class="subtitle">Kumpulan kisah seputar kopi, kuliner, dan sudut nyaman di Jepara.</p>
+      </div>
+      <input type="text" id="searchInput" placeholder="Cari artikel (misal: Muria, WFC)..." class="search-box">
+    </div>
+
+    <!-- Filter Kategori -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">Semua</button>
+      <button class="filter-btn" data-category="Cerita Kopi">Cerita Kopi</button>
+      <button class="filter-btn" data-category="Di Balik Dapur">Di Balik Dapur</button>
+      <button class="filter-btn" data-category="Panduan Jepara">Panduan Jepara</button>
+    </div>
+
+    <!-- Grid Daftar Artikel (Otomatis diisi oleh script.js) -->
+    <div id="blogGrid" class="blog-grid"></div>
+  </section>
+
+  <!-- Bagian Daftar Menu -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="category-tag">Sajian Atmosfera</span>
+          <h2>Daftar Menu Makanan & Minuman</h2>
+          <p class="subtitle">Pilihan hidangan hangat dan racikan kopi segar di Atmosfera Jepara.</p>
+        </div>
+      </div>
+
+      <!-- Tab Kategori Menu -->
+      <div class="menu-tabs">
+        <button class="menu-tab-btn active" data-menu="coffee">Classic Coffee</button>
+        <button class="menu-tab-btn" data-menu="americano">Signature Americano</button>
+        <button class="menu-tab-btn" data-menu="signatureDrink">Signature & Milk Tea</button>
+        <button class="menu-tab-btn" data-menu="tea">Artisan Tea</button>
+        <button class="menu-tab-btn" data-menu="breakfast">Breakfast & Salad</button>
+        <button class="menu-tab-btn" data-menu="rice">Rice & Nusantara</button>
+        <button class="menu-tab-btn" data-menu="pasta">Pasta & Western</button>
+        <button class="menu-tab-btn" data-menu="snack">Snack & Bites</button>
+      </div>
+      <!-- Konten Menu Dinamis (Diisi oleh script.js) -->
+      <div id="menuDisplay" class="menu-showcase"></div>
+    </div>
+  </section>
+
+  <!-- Bagian Tentang -->
+  <section id="tentang" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="category-tag">Tentang Atmosfera</span>
+        <h2>Lebih dari Sekadar Tempat Ngopi di Jepara</h2>
+        <p>Atmosfera Coffee and Eatery hadir sebagai ruang singgah yang memadukan kualitas biji kopi pilihan dengan sajian makanan rumahan yang hangat. Baik untuk bekerja dari kafe (WFC), berdiskusi santai, maupun melepas penat di akhir pekan.</p>
+      </div>
+      <div class="about-info-card">
+        <h3>Fasilitas & Suasana</h3>
+        <ul>
+          <li>✓ Area Indoor Ber-AC (Nyaman untuk WFC)</li>
+          <li>✓ Area Outdoor & Smoking</li>
+          <li>✓ Wi-Fi Kencang & Banyak Stopkontak</li>
+          <li>✓ Menu Kopi Lokal & Makanan Berat</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Lokasi -->
+  <footer id="lokasi" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Atmosfera Coffee & Eatery</h3>
+        <p>Whatssapp:0857-****-****</p>
+        <p>Instagram:@atmosfera.coffeandeatery</p>
+        <p>lokasi:Jl. Dr. Sutomo No.29, Kauman, Kec. Jepara, Kabupaten Jepara, Jawa Tengah 59417</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>DISCLAIMER: Website ini dibuat untuk praktikum mata kuliah Aplikasi Komputer Bisnis. Seluruh informasi di website ini tidak resmi dan hanya ilustrasi, serta tidak menggambarkan keadaan sebenarnya dan terkini dari pemilik bisnis yang asli..</p>
+    </div>
+  </footer>
+
+  <!-- Modal / Popup untuk Membaca Artikel Penuh -->
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn">×</button>
+      <img id="modalImg" src="" alt="Gambar Artikel" class="modal-img">
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span id="modalCategory" class="category-tag"></span>
+          <span id="modalDate"></span>
+        </div>
+        <h2 id="modalTitle"></h2>
+        <div id="modalText" class="modal-article-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
