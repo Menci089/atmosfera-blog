@@ -6,7 +6,7 @@
   --text-muted: #66615C;
 }
 
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -529,9 +529,74 @@ h1, h2, h3, .logo {
 }
 
 /* Responsif Mobile */
+/* Tombol Hamburger (Tersembunyi di Laptop/Desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #F5EFE6;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsif Mobile (Android / iOS) - HARUS DI PALING BAWAH */
 @media (max-width: 768px) {
+  .nav-logo {
+    height: 48px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #F5EFE6;
+    padding: 18px;
+    border-radius: 16px;
+    gap: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px;
+  }
+
   .hero h1 { font-size: 2rem; }
-  .nav-links a:not(.btn-outline) { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .search-box { width: 100%; }
 }

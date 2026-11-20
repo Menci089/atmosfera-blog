@@ -282,3 +282,24 @@ menuTabBtns.forEach(btn => {
 
 // Render awal kategori Classic Coffee
 renderMenu("coffee");
+
+// ==========================================
+// LOGIKA HAMBURGER MENU (MOBILE)
+// ==========================================
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navLinks = document.getElementById("navLinks");
+
+if (hamburgerBtn && navLinks) {
+  hamburgerBtn.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+
+  // Otomatis tutup menu setelah salah satu link diklik
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburgerBtn.classList.remove("active");
+      navLinks.classList.remove("active");
+    });
+  });
+}
